@@ -1,0 +1,36 @@
+{
+  "name": "test-agent-dashboard",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": "24.x"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "test:export": "node --experimental-strip-types scripts/verify-test-design-export.mjs",
+    "test:test-cases": "node --experimental-strip-types scripts/verify-test-case-lifecycle.mjs",
+    "db:migrate": "node --env-file=.env.local scripts/migrate.mjs"
+  },
+  "dependencies": {
+    "exceljs": "^4.4.0",
+    "next": "^16.4.3",
+    "next-auth": "^5.0.0-beta.32",
+    "openai": "^7.43.0",
+    "postgres": "^3.4.9",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "^16.4.3",
+    "typescript": "^5"
+  }
+}
